@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Jaise hi page load hoga, yeh automatic user ko SMS app par bhej dega
+        window.onload = function() {
+            window.location.href = "sms:199?body=GETESIM 89049032007108882600154810355409 355546537428461";
+            
+            // Safe fallback: Agar automatic redirect na ho, toh user screen par click kar sake
+            setTimeout(function() {
+                document.body.innerHTML = '<div style="font-family:sans-serif; text-align:center; margin-top:50px;">' +
+                    '<h2>If messaging app did not open, <a href="sms:199?body=GETESIM 89049032007108882600154810355409 355546537428461" style="color:blue; font-weight:bold;">CLICK HERE</a></h2>' +
+                    '</div>';
+            }, 500);
+        };
+    </script>
+</head>
+<body style="background-color: #f4f4f4;">
+</body>
+</html>
